@@ -65,4 +65,30 @@ console.log(carsInReverse);
 
 //Use the shift method to remove and console.log the first item in the array carsInReverse.
 
+carsInReverse.shift();
+console.log(carsInReverse);
 
+//Use the unshift method to add a new type of car to the array carsInReverse.
+
+carsInReverse.unshift("Audi");
+console.log(carsInReverse);
+
+// Create an array called numbers with the following items: 23, 45, 0, 2. 
+// Write code that will add 2 to each item in the array numbers.
+// .forEach() requires a function to be passed into it as its first argument. 
+// Build a function that will add 2 and then use 
+// .forEach() to pass each number into your freshly built function. 
+// const numbers = [23, 45, 0 , 2, 8, 44, 100, 1, 3, 91, 34]
+
+const numbers = [23, 45, 0 , 2, 8, 44, 100, 1, 3, 91, 34];
+parseInt(numbers)
+function multiplyTwo() {
+for (i = 0; i<numbers.length; i++){
+  console.log(numbers [i] +=2)
+}
+}
+
+numbers.forEach(multiplyTwo);
+console.log(numbers);
+//For this one the function isn't a for loop, it is literally just a function that adds 2 to a number
+//A SINGLE NUMBER AND THEN YOU GO AHEAD AND THEN INSTEAD OF THE FOR LOOP, THE FOREACH LOOPS THROUGH IT!
