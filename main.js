@@ -39,18 +39,16 @@ console.log(carsInReverse);
 expectedCars= ["Aston Martin", "Ford", "Honda", "Honda", "Jaguar", "Porsche", "Tesla", "Toyota"]
 alert(carsInReverse.indexOf("Aston Martin"))
 
-
 //Use the slice method to remove Ford and Honda from the carsInReverse array and move them into a new array called removedCars 
 //**BUT SLICE DOES NOT CHANGE THE ORIGINAL ARRAY?!?!**
 
-carsInReverse.slice(1,3);
-removedCars = carsInReverse.slice(1,3);
+let removedCars = carsInReverse.slice(1,3);
 console.log(removedCars);
 
 //Use the splice method to remove the 2nd and 3rd items in the array carsInReverse and add Ford and Honda in their place. 
 //**BECAUSE SLICE DID NOT CHANGE ORIGINAL ARRAY, THIS JUST DUPLICATES IN THE ORIGINAL ARRAY
 
-carsInReverse.splice(1, 0, "Ford", "Honda");
+let splicedCars = carsInReverse.splice(1, 2, "Ford", "Honda");
 console.log(carsInReverse);
 
 //Use the push method to add the types of cars that you removed using the splice method to the carsInReverse array.
@@ -60,35 +58,28 @@ console.log(carsInReverse);
 
 //Use the pop method to remove and console.log the last item in the array carsInReverse.
 
-carsInReverse.pop();
-console.log(carsInReverse);
+console.log(carsInReverse.pop());
 
 //Use the shift method to remove and console.log the first item in the array carsInReverse.
 
-carsInReverse.shift();
-console.log(carsInReverse);
+console.log(carsInReverse.shift());
 
 //Use the unshift method to add a new type of car to the array carsInReverse.
 
 carsInReverse.unshift("Audi");
 console.log(carsInReverse);
 
-// Create an array called numbers with the following items: 23, 45, 0, 2. 
-// Write code that will add 2 to each item in the array numbers.
-// .forEach() requires a function to be passed into it as its first argument. 
 // Build a function that will add 2 and then use 
 // .forEach() to pass each number into your freshly built function. 
 // const numbers = [23, 45, 0 , 2, 8, 44, 100, 1, 3, 91, 34]
 
 const numbers = [23, 45, 0 , 2, 8, 44, 100, 1, 3, 91, 34];
-parseInt(numbers)
-function multiplyTwo() {
-for (i = 0; i<numbers.length; i++){
-  console.log(numbers [i] +=2)
-}
+let newNum = []
+numbers.forEach(multiplyTwo)
+
+const multiplyTwo = (x) => {
+  x += 2;
+  newNum.push(x)
 }
 
-numbers.forEach(multiplyTwo);
-console.log(numbers);
-//For this one the function isn't a for loop, it is literally just a function that adds 2 to a number
-//A SINGLE NUMBER AND THEN YOU GO AHEAD AND THEN INSTEAD OF THE FOR LOOP, THE FOREACH LOOPS THROUGH IT!
+console.log(newNum)
